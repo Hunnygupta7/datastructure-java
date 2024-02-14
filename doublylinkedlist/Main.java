@@ -2,13 +2,25 @@ package datastructures.doublylinkedlist;
 
 public class Main {
     public static void main(String args[]) {
-        DoublyLinkedList myDoublyLinkedList = new DoublyLinkedList(1);
+        DoublyLinkedList myDLL = new DoublyLinkedList(1);
+        myDLL.append(3);
 
-        myDoublyLinkedList.getHead();
-        myDoublyLinkedList.getTail();
-        myDoublyLinkedList.getLength();
+        System.out.println("DLL before insert():");
+        myDLL.printList();
 
-        System.out.println("\nDoubly Linked List:");
-        myDoublyLinkedList.printList();
+        myDLL.insert(1, 2);
+
+        System.out.println("\nDLL after insert(2) in middle:");
+        myDLL.printList();
+
+        myDLL.insert(0, 0);
+
+        System.out.println("\nDLL after insert(0) at beginning:");
+        myDLL.printList();
+
+        myDLL.insert(4, 4);
+
+        System.out.println("\nDLL after insert(4) at end:");
+        myDLL.printList();
     }
 }
